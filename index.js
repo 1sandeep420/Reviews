@@ -24,7 +24,7 @@ Datafth().then((Data) =>
 {
 
     let i=0;
-    let j=Data.length
+    let j=(Data.length-1)
     console.log(j)
     if(Data)
     {
@@ -47,8 +47,6 @@ Datafth().then((Data) =>
             Desig.innerText = Data[j].job
             Para.innerText = Data[j].text
             j-=1;
-
-
         })
        
     }
