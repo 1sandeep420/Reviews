@@ -24,29 +24,44 @@ Datafth().then((Data) =>
 {
 
     let i=0;
-    let j=(Data.length-1)
-    console.log(j)
+    
     if(Data)
     {
         Rightbtn.addEventListener('click',()=>
             {
-               
-                console.log(Data[i].name)
-                Imagelink.src = Data[i].img;
-                authorName.innerText = Data[i].name
-                Desig.innerText = Data[i].job
-                Para.innerText = Data[i].text
-                i+=1;
+
+                if(i<Data.length-1)
+                {
+                    console.log(Data[i].name)
+                    Imagelink.src = Data[i].img;
+                    authorName.innerText = Data[i].name
+                    Desig.innerText = Data[i].job
+                    Para.innerText = Data[i].text
+                    i+=1;
+
+                }
+                else
+                {
+                    console.log("last review")
+                }
             })
+            
 
         Leftbtn.addEventListener('click', ()=>
         {
-            console.log(Data[j].name)
-            Imagelink.src = Data[j].img;
-            authorName.innerText = Data[j].name
-            Desig.innerText = Data[j].job
-            Para.innerText = Data[j].text
-            j-=1;
+
+            if(i>0)
+            {
+
+            console.log(Data[i].name)
+            Imagelink.src = Data[i].img;
+            authorName.innerText = Data[i].name
+            Desig.innerText = Data[i].job
+            Para.innerText = Data[i].text
+            i-=1;
+
+            }
+            
         })
        
     }
